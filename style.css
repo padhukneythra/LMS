@@ -1,0 +1,241 @@
+/* General Page Styling */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(0deg, #008080, #F3F4F6); /* Teal to Soft Gray */
+    color: #333333; /* Dark Charcoal */
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #F3F4F6 !important; /* Soft Gray */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Center the UL inside the Navbar */
+.navbar .navbar-collapse {
+    display: flex;
+    justify-content: center; /* Centers the navigation links */
+}
+
+/* Move the LMS brand to the left */
+.navbar-brand {
+    font-weight: bolder;
+    font-size: 4.5rem;
+    color: #008080 !important; /* Teal */
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+    color: #008080 !important; /* Teal */
+    font-weight: 600;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover effect for nav links */
+.navbar .nav-link:hover {
+    color: #333333 !important; /* Dark Charcoal */
+    transform: scale(1.1);
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: #F3F4F6; /* Soft Gray */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333333;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #008080; /* Teal */
+    color: white;
+}
+
+/* Enable dropdown on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Fix any shifting issue */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    background: url('1.jpg') no-repeat center center/cover; /* Replace with your actual image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Overlay for better text visibility */
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Hero Button */
+.hero-content .btn {
+    background-color: #008080;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.hero-content .btn:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* About Us Section */
+.about-section {
+    background: linear-gradient(0deg, #fff, #fdfdfd);
+    padding: 50px 0;
+}
+
+.about-content h2 {
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Cards Styling */
+.card {
+    border-radius: 0; /* Square shape */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    height: 100%; /* Ensure all cards are equal height */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Equal height for card body */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 200px; /* Prevents height differences */
+}
+
+/* Card Title Styling */
+.card-title {
+    color: #008080;
+    font-size: larger;
+    font-weight: bold;
+}
+
+h3 {
+    color: #008080;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+p {
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Icon Styling */
+.icon i {
+    font-size: 2rem;
+    color: #008080;
+    margin-bottom: 10px;
+}
+
+/* Course Section */
+/* Course Section */
+.course-section {
+    background: linear-gradient(0deg, #fff, #fdfdfd);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Course Card */
+.course-card {
+    background: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* Hover Modal */
+.hover-modal {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show Modal on Hover */
+.course-card:hover .hover-modal,
+.hover-modal:hover {
+    opacity: 1;
+    visibility: visible;
+}
